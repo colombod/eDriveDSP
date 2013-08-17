@@ -74,6 +74,9 @@ namespace  mUBreeze{
             
             const float* const GetOutgoingSampleBuffer();
             
+            // set the sample value for the channel. channel index is zero based.
+            void SetInputSample(float value, int channel);
+            
             OscMessage* DequeueFromOutbox();
             
             

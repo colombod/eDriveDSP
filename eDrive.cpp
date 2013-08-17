@@ -79,6 +79,13 @@ namespace mUBreeze{
 			}
 		}
         
+            void Engine::SetInputSample(float value, int channel){
+                if(channel < m_channelCount)
+                {
+                    m_ptrIncomingSamples[channel] = value;
+                }
+            }
+        
         OscMessage* Engine::DequeueFromInbox(){
             return Dequeue(m_inbox);
         }
